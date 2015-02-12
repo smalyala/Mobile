@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.*;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -35,5 +37,13 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void displayFood(View view) {
+        EditText text = (EditText)findViewById(R.id.editText1);
+        String value = text.getText().toString();
+        TextView disp = (TextView)findViewById(R.id.textViewDisplay);
+        String val = "Your least favorite food is " + value;
+        disp.setText(val);
     }
 }

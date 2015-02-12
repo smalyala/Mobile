@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Button</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="prompt">Enter your favorite food:</string>
     <string name="action_settings">Settings</string>
 
 </resources>
