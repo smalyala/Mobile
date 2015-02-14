@@ -43,7 +43,7 @@ public class MainActivity extends ActionBarActivity {
         EditText text = (EditText)findViewById(R.id.editText1);
         String value = text.getText().toString();
         TextView disp = (TextView)findViewById(R.id.textViewDisplay);
-        String val = "Your least favorite food is " + value;
+        String val = "Your favorite food may or not be " + value;
         disp.setText(val);
     }
 }
