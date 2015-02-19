@@ -1,9 +1,12 @@
 package com.mobile.smalyala.conversion;
 
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.*;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -35,5 +38,20 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void exec(View view) {
+        TextView text = (TextView) findViewById(R.id.editText);
+        String age = text.getText().toString();
+        RadioGroup radio = (RadioGroup)findViewById(R.id.radioGroup);
+        RadioButton rb = (RadioButton)findViewById(radio.getCheckedRadioButtonId());
+        String glasses = (String) rb.getText();
+        int first;
+        if (glasses.equals("Yes"))
+            first = 1;
+        else if (glasses.equals("No"))
+            first = 0;
+        radio = (RadioGroup)findViewById(R.id.radioGroup2);
+        rb = (RadioButton)findViewById(radio.getCheckedRadioButtonId());
     }
 }
