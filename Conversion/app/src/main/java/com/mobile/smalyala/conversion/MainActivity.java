@@ -41,17 +41,26 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void exec(View view) {
+        String[] options = new String[]
         TextView text = (TextView) findViewById(R.id.editText);
         String age = text.getText().toString();
         RadioGroup radio = (RadioGroup)findViewById(R.id.radioGroup);
         RadioButton rb = (RadioButton)findViewById(radio.getCheckedRadioButtonId());
-        String glasses = (String) rb.getText();
+        String believer = (String)rb.getText();
         int first;
-        if (glasses.equals("Yes"))
+        if (believer.equals("Yes"))
             first = 1;
-        else if (glasses.equals("No"))
+        else if (believer.equals("No"))
             first = 0;
         radio = (RadioGroup)findViewById(R.id.radioGroup2);
         rb = (RadioButton)findViewById(radio.getCheckedRadioButtonId());
+        String person = (String)rb.getText();
+        int second;
+        if (person.equals("Yes"))
+            second = 1;
+        else if (person.equals("No"))
+            second = 0;
+        else
+            second = -1;
     }
 }
