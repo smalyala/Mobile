@@ -41,7 +41,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void exec(View view) {
-        String[] options = {"", "tree", "cookie", ""}; //9 total
+        String[] options = {"monkey", "tree", "cookie", "mouse", "fish", "rock", "spider monkey", "human", "human"}; //9 total
         String answer;
         TextView text = (TextView) findViewById(R.id.editText);
         String ageFake = text.getText().toString();
@@ -74,5 +74,7 @@ public class MainActivity extends ActionBarActivity {
         else {
             answer = "believer.";
         }
+        TextView disp = (TextView)findViewById(R.id.disp);
+        disp.setText(answer);
     }
 }
