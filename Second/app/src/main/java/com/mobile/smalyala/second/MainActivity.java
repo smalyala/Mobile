@@ -1,16 +1,12 @@
-package com.mobile.smalyala.viewz;
+package com.mobile.smalyala.second;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 
 
 public class MainActivity extends ActionBarActivity {
-
-    int cycle = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,28 +35,5 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void change(View view) {
-        ImageView image = (ImageView)findViewById(R.id.imageView);
-        cycle = (cycle + 1)%8;
-        if (cycle == 0)
-            image.setImageResource(R.drawable.cookie);
-        else if (cycle == 1)
-            image.setImageResource(R.drawable.fish);
-        else if (cycle == 2)
-            image.setImageResource(R.drawable.human);
-        else if (cycle == 3)
-            image.setImageResource(R.drawable.monkey);
-        else if (cycle == 4)
-            image.setImageResource(R.drawable.mouse);
-        else if (cycle == 4)
-            image.setImageResource(R.drawable.rock);
-        else if (cycle == 5)
-            image.setImageResource(R.drawable.spidermonkey);
-        else if (cycle == 6)
-            image.setImageResource(R.drawable.tree);
-        else if (cycle == 7)
-            image.setImageResource(R.drawable.turtle);
     }
 }
