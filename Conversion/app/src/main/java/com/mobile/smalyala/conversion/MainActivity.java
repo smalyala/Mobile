@@ -1,5 +1,7 @@
 package com.mobile.smalyala.conversion;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,11 +12,17 @@ import android.widget.*;
 
 
 public class MainActivity extends ActionBarActivity {
+    String key = "com.mobile.smalyala.conversion.reincarnation";
+    private SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        prefs = this.getSharedPreferences("com.mobile.smalyala.conversion", Context.MODE_PRIVATE);
+        String previous = prefs.getString(key, "");
+        TextView disp = (TextView)findViewById(R.id.disp);
+        disp.setText(previous);
     }
 
 
@@ -76,5 +84,7 @@ public class MainActivity extends ActionBarActivity {
         }
         TextView disp = (TextView)findViewById(R.id.disp);
         disp.setText(answer);
+        String str = answer;
+        prefs.edit().putString(key, str).apply();
     }
 }
